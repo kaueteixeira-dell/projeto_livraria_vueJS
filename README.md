@@ -1,4 +1,4 @@
-# .
+# Projeto - 1º Trimestre - Desenvolvimento Web II
 
 Este repositório contém a estrutura de arquivos básica para o projeto do 1º Trimestre da Disciplina de Desenvolvimento Web II do Curso Técnico em Informática do IFC - Campus Araquari.
 
