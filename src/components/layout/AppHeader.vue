@@ -12,18 +12,20 @@
     </div>
     <div class="barra-pesquisa">
       <input type="text" placeholder="pesquisar"/>
+      <button><img src="../icons/lupa.svg" alt="Lupa"></button>
     </div>
     <nav>
       <ul>
-        <li><RouterLink to="/">Termos</RouterLink></li>
-        <li><RouterLink to="/produtos">Equipe</RouterLink></li>
-        <li><RouterLink to="/produtos">Envio</RouterLink></li>
-        <li><RouterLink to="/produtos">Devoluções</RouterLink></li>
+        <li><RouterLink to="/">Home</RouterLink></li>
+        <li><RouterLink to="/produtos">Produtos</RouterLink></li>
+        <li><RouterLink to="/equipe">Equipe</RouterLink></li>
+        <li><RouterLink to="/envio">Envio</RouterLink></li>
+        <li><RouterLink to="/devoluções">Devoluções</RouterLink></li>
         <li><RouterLink to="/carrinho"><img src="../icons/carrinho.svg" alt="Carrinho"></RouterLink></li>
         <span>|</span>
-        <li><RouterLink to="/carrinho"><img src="../icons/like.svg" alt="Like"></RouterLink></li>
+        <li><RouterLink to="/like"><img src="../icons/like.svg" alt="Like"></RouterLink></li>
         <span>|</span>
-        <li><RouterLink to="/carrinho"><img src="../icons/login.svg" alt="Login"></RouterLink></li>
+        <li><RouterLink to="/login"><img src="../icons/login.svg" alt="Login"></RouterLink></li>
       </ul>
     </nav>
   </header>
@@ -56,6 +58,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -90,6 +93,7 @@ header {
   padding: 20px;
   gap: 20px;
   background-color: white;
+  border-bottom: 2px solid rgb(36, 228, 36);
 }
 header nav {
   display: flex;
@@ -106,6 +110,15 @@ header p {
 header a {
   font-size: 14px;
   color: rgb(112, 112, 112);
+}
+header a:hover, header img:hover {
+  transition: 0.3s;
+  color: rgb(100, 100, 100);
+  font-weight: bold;
+  img {
+    filter: brightness(0.8);
+    transition: 0.3s;
+  }
 }
 header .logo {
   align-items: center;
@@ -124,13 +137,28 @@ header nav span {
   color: rgb(88, 216, 88);
 }
 header .barra-pesquisa input {
-  padding: 12px 10vw 12px 1vw;
+  padding: 12px 15vw 12px 1vw;
   background-color: rgb(240, 240, 240);
   border: none;
   border-radius: 1px;
+  font-size: 17px;
+}
+header .barra-pesquisa {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  background-color: rgb(240, 240, 240);
+  padding-right: 10px;
+  border-radius: 1px;
+}
+header .barra-pesquisa button {
+  border: none;
+}
+header .barra-pesquisa input:hover{
+  background-color: rgb(228, 228, 228);
+  transition: 0.3s;
 }
 header .logo h1 {
   font-size: 24px;
   color: rgb(0, 0, 0);
-}
-</style>
+}</style>
