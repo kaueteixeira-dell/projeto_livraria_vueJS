@@ -5,6 +5,7 @@ defineProps(['id', 'titulo', 'autor', 'resenha', 'preco', 'capa']);
 </script>
 
 <template>
+  aa
 <div>{{ id }} - {{ nome }}</div>
 </template>
 
