@@ -5,11 +5,25 @@
 
 <template>
   <header>
+    <div class="logo">
+      <h1>IFbooks</h1>
+      <span>|</span>
+      <p>apreço a<br>leitura</p>
+    </div>
+    <div class="barra-pesquisa">
+      <input type="text" placeholder="pesquisar"/>
+    </div>
     <nav>
       <ul>
-        <li><RouterLink to="/">Home</RouterLink></li>
-        <li><RouterLink to="/produtos">Produtos</RouterLink></li>
-        <li><RouterLink to="/carrinho">Carrinho</RouterLink></li>
+        <li><RouterLink to="/">Termos</RouterLink></li>
+        <li><RouterLink to="/produtos">Equipe</RouterLink></li>
+        <li><RouterLink to="/produtos">Envio</RouterLink></li>
+        <li><RouterLink to="/produtos">Devoluções</RouterLink></li>
+        <li><RouterLink to="/carrinho"><img src="../icons/carrinho.svg" alt="Carrinho"></RouterLink></li>
+        <span>|</span>
+        <li><RouterLink to="/carrinho"><img src="../icons/like.svg" alt="Like"></RouterLink></li>
+        <span>|</span>
+        <li><RouterLink to="/carrinho"><img src="../icons/login.svg" alt="Login"></RouterLink></li>
       </ul>
     </nav>
   </header>
@@ -17,4 +31,106 @@
 
 <style scoped>
 
+/* === RESET === */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* === RESET === */
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  background-color: white;
+}
+header nav {
+  display: flex;
+}
+header nav ul {
+  display: flex;
+  gap: 20px;
+  margin-left: 20px;
+}
+header p {
+  font-size: 14px;
+  color: rgb(88, 216, 88);
+}
+header a {
+  font-size: 14px;
+  color: rgb(112, 112, 112);
+}
+header .logo {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+header nav ul {
+  align-items: center;
+}
+header .logo span {
+  font-size: 1.65vw;
+  color: rgb(88, 216, 88);
+}
+header nav span {
+  font-size: 1.25vw;
+  color: rgb(88, 216, 88);
+}
+header .barra-pesquisa input {
+  padding: 12px 10vw 12px 1vw;
+  background-color: rgb(240, 240, 240);
+  border: none;
+  border-radius: 1px;
+}
+header .logo h1 {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+}
 </style>
