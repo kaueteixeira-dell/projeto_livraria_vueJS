@@ -5,7 +5,8 @@
 
 <template>
   <footer>
-    <div class="link-redes">
+    <div class="container">
+      <div class="link-redes">
     <h1>IFbooks</h1>
     <nav>
       <ul>
@@ -30,7 +31,14 @@
           <img src="../icons/email.svg" alt="Email">
           <p>contato@ifbooks.com</p>
         </li>
+        <li>
+          <img class="forma-pagamento" src="../icons/estilo-pagamento.png" alt="Formas de pagamento">
+        </li>
       </ul>
+    </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; Alguns direitos reservados. IFbooks 2025.</p>
     </div>
   </footer>
 </template>
@@ -92,9 +100,12 @@ table {
 
 footer {
   background-color: #27AE60;
+}
+footer .container {
   padding: 3vw 5vw;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid white;
 }
 footer h1 {
   color: #fff;
@@ -108,8 +119,21 @@ footer nav ul {
 footer nav ul li a:hover {
   opacity: 0.8;
 }
+footer .contato ul li{
+  display: flex;
+  margin: 1vw 1vw;
+}
+footer .contato p {
+  color: white;
+  margin-left: 15px;
+}
 footer .contato h2{
   font-size: 1.4rem;
-
+  color: white;
+  font-weight: 500;
+}
+footer .copyright {
+  text-align: center;
+  padding: 1vw 3vw;
 }
 </style>
