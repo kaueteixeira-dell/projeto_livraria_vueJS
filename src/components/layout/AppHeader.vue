@@ -161,4 +161,5 @@ header .barra-pesquisa input:hover{
 header .logo h1 {
   font-size: 24px;
   color: rgb(0, 0, 0);
-}</style>
+}
+</style>
