@@ -33,7 +33,7 @@ export const produtos = [
     autor: 'Kyle Simpson',
     resenha: 'Livro voltado ao aprofundamento dos principais conceitos da linguagem JavaScript.',
     preco: 79.9,
-    capa: 'https://covers.openlibrary.org/b/isbn/9781091210092-L.jpg',
+    capa: '/Js Yet.jpg',
   },
   {
     id: 5,
