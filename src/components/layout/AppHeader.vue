@@ -1,6 +1,11 @@
 <script setup>
   // Este arquivo é um componente Vue que representa o cabeçalho do aplicativo, contendo a barra de navegação com links para as principais seções do site, como Home, Produtos e Carrinho. Ele é projetado para ser reutilizado em todas as páginas do aplicativo, proporcionando uma navegação consistente para os usuários.
   import { RouterLink } from 'vue-router';
+  import produtosFiltrados from '@/data/productUtils.js';
+
+  const buscarProdutos = (event) => {
+    produtosFiltrados(event.target.value);
+  };
 </script>
 
 <template>
@@ -11,21 +16,21 @@
       <p>apreço a<br>leitura</p>
     </div>
     <div class="barra-pesquisa">
-      <input type="text" placeholder="pesquisar"/>
+      <input type="text" placeholder="pesquisar" @input="buscarProdutos"/>
       <button><img src="../icons/lupa.svg" alt="Lupa"></button>
     </div>
     <nav>
       <ul>
         <li><RouterLink to="/">Home</RouterLink></li>
         <li><RouterLink to="/produtos">Produtos</RouterLink></li>
-        <li><RouterLink to="/equipe">Equipe</RouterLink></li>
-        <li><RouterLink to="/envio">Envio</RouterLink></li>
-        <li><RouterLink to="/devoluções">Devoluções</RouterLink></li>
+        <li><RouterLink to="/">Equipe</RouterLink></li>
+        <li><RouterLink to="/">Envio</RouterLink></li>
+        <li><RouterLink to="/">Devoluções</RouterLink></li>
         <li><RouterLink to="/carrinho"><img src="../icons/carrinho.svg" alt="Carrinho"></RouterLink></li>
         <span>|</span>
-        <li><RouterLink to="/like"><img src="../icons/like.svg" alt="Like"></RouterLink></li>
+        <li><RouterLink to="/"><img src="../icons/like.svg" alt="Like"></RouterLink></li>
         <span>|</span>
-        <li><RouterLink to="/login"><img src="../icons/login.svg" alt="Login"></RouterLink></li>
+        <li><RouterLink to="/"><img src="../icons/login.svg" alt="Login"></RouterLink></li>
       </ul>
     </nav>
   </header>
