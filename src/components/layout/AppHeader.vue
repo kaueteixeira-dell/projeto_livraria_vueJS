@@ -1,10 +1,9 @@
 <script setup>
-  // Este arquivo é um componente Vue que representa o cabeçalho do aplicativo, contendo a barra de navegação com links para as principais seções do site, como Home, Produtos e Carrinho. Ele é projetado para ser reutilizado em todas as páginas do aplicativo, proporcionando uma navegação consistente para os usuários.
   import { RouterLink } from 'vue-router';
-  import produtosFiltrados from '@/data/productUtils.js';
+  import { buscarProdutos } from '@/data/productUtils.js';
 
-  const buscarProdutos = (event) => {
-    produtosFiltrados(event.target.value);
+  const pesquisar = (event) => {
+    buscarProdutos(event.target.value);
   };
 </script>
 
@@ -16,7 +15,7 @@
       <p>apreço a<br>leitura</p>
     </div>
     <div class="barra-pesquisa">
-      <input type="text" placeholder="pesquisar" @input="buscarProdutos"/>
+      <input type="text" placeholder="pesquisar" @input="pesquisar"/>
       <button><img src="../icons/lupa.svg" alt="Lupa"></button>
     </div>
     <nav>

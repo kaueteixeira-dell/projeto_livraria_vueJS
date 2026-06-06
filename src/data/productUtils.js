@@ -1,18 +1,21 @@
+import { ref } from 'vue';
 import { produtos } from './product.js';
 
-const produtosFiltrados = (filtro) => {
+const produtosFiltrados = ref([...produtos]);
+const buscarProdutos = (filtro) => {
   if (!filtro) {
-    return produtos;
+    produtosFiltrados.value = produtos;
+    return;
   }
+
   const filtroLower = filtro.toLowerCase();
-  const retorno = produtos.filter((produto) => {
+
+  produtosFiltrados.value = produtos.filter((produto) => {
     return (
       produto.titulo.toLowerCase().includes(filtroLower) ||
       produto.autor.toLowerCase().includes(filtroLower)
     );
   });
-  alert(retorno[0].titulo);
-  return retorno;
 }
 
-export default produtosFiltrados;
+export { produtosFiltrados, buscarProdutos };
