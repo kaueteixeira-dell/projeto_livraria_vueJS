@@ -57,3 +57,45 @@ function addCarrinho(idLivro, quantidade) {
 }
 
 export { carrinho, addCarrinho }
+
+
+
+
+
+//Todas as functions utilizadas no trabalho.
+export function adicionarAoCarrinho(carrinho, produto) {
+  const itemExistente = carrinho.find(item => item.id === produto.id)
+  if (itemExistente) {
+    itemExistente.quantidade++
+  } else {
+    carrinho.push({ ...produto, quantidade: 1 })
+  }
+  return carrinho
+}
+
+export function removerDoCarrinho(carrinho, produtoId) {
+  return carrinho.filter(item => item.id !== produtoId)
+}
+
+export function atualizacaoQuantidade(carrinho, produtoId, quantidade) {
+  if (quantidade <= 0) {
+    return removerDoCarrinho(carrinho, produtoId)
+  }
+  const item = carrinho.find(item => item.id === produtoId)
+  if (item) {
+    item.quantidade = quantidade
+  }
+  return carrinho
+}
+
+export function totalCArrinho(carrinho) {
+  return carrinho.reduce((total, item) => total + item.preco * item.quantidade, 0)
+}
+
+export function contadorItemCarrinho(carrinho) {
+  return carrinho.reduce((count, item) => count + item.quantidade, 0)
+}
+
+export function limparCarrinho() {
+  return []
+}
