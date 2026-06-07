@@ -24,7 +24,7 @@ function favoritar() {
       <div class="botoes">
         <button class="btn-carrinho" @click="adicionarAoCarrinho">Adicionar ao Carrinho</button>
         <button class="btn-favorito" @click="favoritar">
-          <img src="../icons/like.svg" alt="Favoritar" :class="{ ativo: isFavorito(id) }">
+          <font-awesome-icon :icon="isFavorito(id) ? 'fas fa-heart' : 'far fa-heart'" />
         </button>
       </div>
     </div>
@@ -69,18 +69,14 @@ img {
 }
 .btn-favorito {
   background: none;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: none;
   cursor: pointer;
-  padding: 6px;
-  display: flex;
-  align-items: center;
+  font-size: 22px;
+  color: #888;
+  transition: 0.2s;
 }
-.btn-favorito img {
-  width: 20px;
-  height: 20px;
-}
-.btn-favorito img.ativo {
-  filter: brightness(0) saturate(100%) invert(16%) sepia(99%) saturate(7474%) hue-rotate(357deg) brightness(97%) contrast(120%);
+.btn-favorito:hover {
+  color: #e74c3c;
+  transform: scale(1.15);
 }
 </style>

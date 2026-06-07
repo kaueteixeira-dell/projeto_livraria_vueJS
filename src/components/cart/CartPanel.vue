@@ -16,7 +16,7 @@
 
 <template>
   <div class="painel-cart">
-    <h2>Carrinho de Compras</h2>
+    <h2>Meu carrinho</h2>
     <div v-if="carrinho.length === 0" class="carrinho-vasio">
       <p>Seu carrinho está vazio.</p>
       <router-link to="/produtos" class="back-link">Voltar aos produtos</router-link>
