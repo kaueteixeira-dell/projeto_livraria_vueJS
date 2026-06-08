@@ -1,6 +1,7 @@
 <script setup>
 import { addCarrinho } from '@/utils/cartUtils'
 import { toggleFavorito, isFavorito } from '@/utils/favoritosUtils'
+import { formataPreco } from '@/utils/currencyUtils'
 
 const props = defineProps(['id', 'titulo', 'autor', 'resenha', 'preco', 'capa'])
 
@@ -20,7 +21,7 @@ function favoritar() {
     <div class="info">
       <h2>{{ titulo }}</h2>
       <p>{{ autor }}</p>
-      <h3>R${{ preco }}</h3>
+      <h3>{{ formataPreco(preco) }}</h3>
       <div class="botoes">
         <button class="btn-carrinho" @click="adicionarAoCarrinho">Adicionar ao Carrinho</button>
         <button class="btn-favorito" @click="favoritar">
