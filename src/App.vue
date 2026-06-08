@@ -2,6 +2,7 @@
 import { computed, provide } from 'vue'
 import { RouterView } from 'vue-router'
 import AppHeader from '@/components/layout/AppHeader.vue'
+import AppFooter from '@/components/layout/AppFooter.vue'
 import { carrinho, incrementarQuantidade, decrementarQuantidade, removerDoCarrinho, checkout, calcularTotal, calcularContador } from '@/utils/cartUtils'
 
 const contadorItem = computed(() => calcularContador())
