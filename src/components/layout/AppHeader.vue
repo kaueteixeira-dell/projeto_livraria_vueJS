@@ -27,7 +27,7 @@
         <li><RouterLink to="/">Devoluções</RouterLink></li>
         <li><RouterLink to="/carrinho"><img src="../icons/carrinho.svg" alt="Carrinho"></RouterLink></li>
         <span>|</span>
-        <li><RouterLink to="/"><img src="../icons/like.svg" alt="Like"></RouterLink></li>
+        <li><RouterLink to="/favoritos"><img src="../icons/like.svg" alt="Favoritos"></RouterLink></li>
         <span>|</span>
         <li><RouterLink to="/"><img src="../icons/login.svg" alt="Login"></RouterLink></li>
       </ul>

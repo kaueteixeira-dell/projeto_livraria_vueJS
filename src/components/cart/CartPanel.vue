@@ -4,8 +4,9 @@
       import CartItem from './CartItem.vue'
       import CartSummary from './CartSummary.vue'
 
-      defineProps({carrinho: {type: Array, default: () => [] }, contadorItem: {type: Number, default: 0}, total: {type: Number, default: 0}})
-
+      const carrinho = inject('carrinho')
+      const contadorItem = inject('contadorItem')
+      const total = inject('total')
       const incrementarQuantidade = inject('incrementarQuantidade')
       const decrementarQuantidade = inject('decrementarQuantidade')
       const removerDoCarrinho = inject('removerDoCarrinho')
@@ -15,10 +16,10 @@
 
 <template>
   <div class="painel-cart">
-    <h2>Carrinho de Compras</h2>
+    <h2>Meu carrinho</h2>
     <div v-if="carrinho.length === 0" class="carrinho-vasio">
       <p>Seu carrinho está vazio.</p>
-      <router-link to="/" class="back-link">Voltar aos produtos</router-link>
+      <router-link to="/produtos" class="back-link">Voltar aos produtos</router-link>
     </div>
     <div v-else>
       <CartItem

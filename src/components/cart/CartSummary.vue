@@ -1,7 +1,6 @@
-<script setup> 
-// Este arquivo é um componente Vue que representa o último resumo do carrinho de compras, exibindo o total geral e um botão para finalizar a compra.
 <script setup>
-    import { formatCurrency } from '../../utils/currencyUtils'
+// Este arquivo é um componente Vue que representa o último resumo do carrinho de compras, exibindo o total geral e um botão para finalizar a compra.
+    import { formataPreco } from '../../utils/currencyUtils'
 
     defineProps({
       contadorItem: {
@@ -20,11 +19,11 @@
   <div class="sumario-carrinho">
     <div class="linha-sumario">
       <span>Itens:</span>
-      <span>{{ itemCount }}</span>
+      <span>{{ contadorItem }}</span>
     </div>
     <div class="linha-sumario total">
       <span>Total:</span>
-      <span>{{ formatCurrency(total) }}</span>
+      <span>{{ formataPreco(total) }}</span>
     </div>
     <button class="checkout-btn" @click="$emit('checkout')">Finalizar Compra</button>
   </div>
