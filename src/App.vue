@@ -21,6 +21,7 @@ provide('checkout', checkout)
   <main>
     <RouterView />
   </main>
+  <AppFooter />
 </template>
 
 <style scoped>
