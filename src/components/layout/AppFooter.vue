@@ -97,7 +97,14 @@ table {
 }
 /* === RESET === */
 
-
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column; /* Organiza os elementos verticalmente */
+}
 footer {
   background-color: #27AE60;
 }
@@ -109,7 +116,7 @@ footer .container {
 }
 footer h1 {
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin-bottom: 8px;
 }
 footer nav ul {
@@ -135,5 +142,6 @@ footer .contato h2{
 footer .copyright {
   text-align: center;
   padding: 1vw 3vw;
+  color: white;
 }
 </style>
