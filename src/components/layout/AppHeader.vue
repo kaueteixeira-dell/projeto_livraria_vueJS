@@ -22,9 +22,9 @@
       <ul>
         <li><RouterLink to="/">Home</RouterLink></li>
         <li><RouterLink to="/produtos">Produtos</RouterLink></li>
-        <li><RouterLink to="/">Equipe</RouterLink></li>
-        <li><RouterLink to="/">Envio</RouterLink></li>
-        <li><RouterLink to="/">Devoluções</RouterLink></li>
+        <li><RouterLink to="">Equipe</RouterLink></li>
+        <li><RouterLink to="">Envio</RouterLink></li>
+        <li><RouterLink to="">Devoluções</RouterLink></li>
         <li><RouterLink to="/carrinho"><img src="../icons/carrinho.svg" alt="Carrinho"></RouterLink></li>
         <span>|</span>
         <li><RouterLink to="/favoritos"><img src="../icons/like.svg" alt="Favoritos"></RouterLink></li>
