@@ -1,8 +1,20 @@
 <script setup>
-// Este arquivo é o componente principal do aplicativo Vue.js, responsável por estruturar a aplicação e renderizar os componentes principais. Ele inclui o AppHeader para a navegação e um RouterView para exibir o conteúdo das páginas com base nas rotas definidas. O App.vue serve como o ponto de entrada para a aplicação.
+import { computed, provide } from 'vue'
 import { RouterView } from 'vue-router'
 import AppHeader from '@/components/layout/AppHeader.vue'
-import AppFooter from './components/layout/AppFooter.vue';
+import AppFooter from '@/components/layout/AppFooter.vue'
+import { carrinho, incrementarQuantidade, decrementarQuantidade, removerDoCarrinho, checkout, calcularTotal, calcularContador } from '@/utils/cartUtils'
+
+const contadorItem = computed(() => calcularContador())
+const total = computed(() => calcularTotal())
+
+provide('carrinho', carrinho)
+provide('contadorItem', contadorItem)
+provide('total', total)
+provide('incrementarQuantidade', incrementarQuantidade)
+provide('decrementarQuantidade', decrementarQuantidade)
+provide('removerDoCarrinho', removerDoCarrinho)
+provide('checkout', checkout)
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup>
-    import { formatCurrency } from '../../utils/currencyUtils'
+    import { formataPreco } from '../../utils/currencyUtils'
 
     defineProps({
       item: {
@@ -17,7 +17,7 @@
     <div class="item-info">
       <h4 class="item-titulo">{{ item.titulo }}</h4>
       <p class="item-autor">{{ item.autor }}</p>
-      <p class="item-preco">{{ formatCurrency(item.preco) }}</p>
+      <p class="item-preco">{{ formataPreco(item.preco) }}</p>
     </div>
     <div class="controle-item">
       <button class="quantidade-btn" @click="$emit('decrementar', item.id)">-</button>
